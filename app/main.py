@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from loguru import logger as LOGGER
 
-from app.routers import api_router, streaming_router
+from app.routers import api_router, streaming_router, shared_router
 from app.settings import get_settings
 
 
@@ -32,6 +32,7 @@ class Application(FastAPI):
     def include_routers(self) -> None:
         self.include_router(api_router)
         self.include_router(streaming_router)
+        self.include_router(shared_router)
         LOGGER.debug("[MAIN] Routers added")
 
     def add_middlewares(self) -> None:
