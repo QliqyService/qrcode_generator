@@ -1,6 +1,6 @@
 # Qliqy QR Code Generator
 
-![CI](https://github.com/QliqService/actions/workflows/qrcode-generator-build.yml/badge.svg)
+![CI](https://github.com/QliqyService/qrcode_generator/actions/workflows/qrcode-generator-build.yml/badge.svg)
 ![Status](https://img.shields.io/badge/status-active%20development-b4492f)
 
 
