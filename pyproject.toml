@@ -79,3 +79,12 @@ sequence = [
 [tool.poe.tasks.dev]
 cmd = "uvicorn --reload --use-colors --host 0.0.0.0 --port \"${port}\" --log-level debug app.main:app"
 args = { port = { options = ["-p"], default = "8000" } }
+
+[tool.poe.tasks.prod]
+cmd = "uvicorn --host 0.0.0.0 --port \"${port}\" --log-level info app.main:app"
+args = { port = { options = ["-p"], default = "8000" } }
+
+[tool.poe.tasks.start-prod]
+sequence = [
+    { ref = "prod" },
+]
